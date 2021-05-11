@@ -1,0 +1,54 @@
+.customer-list {
+  box-shadow: 0px 0px 41px 10px rgba(0, 0, 0, 0.81);
+}
+
+#customer-info {
+  visibility: hidden;
+  opacity: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.81);
+}
+
+.lang-wrap {
+  background: #333;
+  text-align: center;
+}
+
+.lang-wrap a {
+  text-transform: uppercase;
+  color: #333;
+  text-decoration: none;
+  padding: 0 15px;
+  font-weight: bold;
+  background: #fff;
+  font-size: 18px;
+}
+
+.lang-wrap a.active {
+  color: #fff;
+  background: green;
+}
+
+#login {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+#login .login {
+  height: 100vh;
+}
+
+#login .login #wrong-email {
+  display: none;
+}
+
+#login .login #wrong-password {
+  display: none;
+}
