@@ -33,7 +33,7 @@ loginBtn.addEventListener('click',function(e){
     e.preventDefault();
     if(passwordInput.value==Customer.password && emailInput.value==JSON.parse(sessionStorage.getItem("email"))){
       let now = new Date();
-      now.setTime(now.getTime() + 24 * 3600 * 1000);
+      now.setTime(now.getTime() + 24 * 36000 * 1000);
       let cookiedata =  `token=supersecuretoken;expires=${now.toUTCString()};`;
       document.cookie=cookiedata
 
@@ -63,11 +63,8 @@ const logoutBtn = document.getElementById("logout-btn");
 function getUserDetail(){
     fetch("https://randomuser.me/api/").
     then(function(response){
-        console.log(response);
         return response.json();
     }).then(function(user){
-        console.log(user.results)
-        console.log(user.results[0].gender);
         let userFullName = user.results[0].name.title + " " + user.results[0].name.first + " " + user.results[0].name.last;
 
         console.log(userFullName);
@@ -76,7 +73,6 @@ function getUserDetail(){
         sessionStorage.setItem('loggedUsername',JSON.stringify(user.results[0].login.username));
         sessionStorage.setItem('loggedMail',JSON.stringify(user.results[0].email));
         sessionStorage.setItem('phone',JSON.stringify(user.results[0].phone));
-        console.log(JSON.parse(sessionStorage.getItem("picture")))
         let html ="";
         html=
         `
@@ -89,7 +85,6 @@ function getUserDetail(){
                 
             </tr>
         `
-        console.log(html);
         tBodyUser.innerHTML = html;
     })
 }
