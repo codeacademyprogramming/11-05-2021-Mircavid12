@@ -91,6 +91,10 @@ function getUserDetail(){
 
 getUserDetail();
 
+if(!JSON.parse(localStorage.getItem('lang'))){
+  JSON.parse(localStorage.setItem('lang',"EN"))
+}
+
 
 
 
