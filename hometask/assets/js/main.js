@@ -226,24 +226,14 @@ function getCustomers() {
         }
 
         if (active > 0) {
-          if(JSON.parse(localStorage.getItem("lang")).lang=="AZ"){
-            activeLoan.innerHTML = '<p class="text-success">Bəli</p>';
-            arr1.push(article);
-          }
-          else{
             activeLoan.innerHTML = '<p class="text-success">True</p>';
             arr1.push(article);
-          }
+          
           
         } else {
-          if(JSON.parse(localStorage.getItem("lang")).lang=="AZ"){
-            activeLoan.innerHTML = '<p class="text-danger">Xeyr</p>';
-            arr2.push(article);
-          }
-          else{
             activeLoan.innerHTML = '<p class="text-danger">False</p>';
             arr2.push(article);
-          }
+          
         }
         var sum;
         sum = sumOfPay;
@@ -252,17 +242,11 @@ function getCustomers() {
         }
         totalMonthlyPay.innerText = sum + " AZN";
         if ((article.salary.value * 45) / 100 < sumOfPay) {
-          if(JSON.parse(localStorage.getItem("lang")).lang=="AZ"){
-             canBeApplied.innerHTML = '<p class="text-danger">Xeyr</p>';
-          }else{
             canBeApplied.innerHTML = '<p class="text-danger">False</p>';
-          }
+          
         } else {
-          if(JSON.parse(localStorage.getItem("lang")).lang=="AZ"){
-            canBeApplied.innerHTML = '<p class="text-success">Bəli</p>';
-         }else{
            canBeApplied.innerHTML = '<p class="text-success">True</p>';
-         }
+         
         }
 
         name.innerText = article.name;
