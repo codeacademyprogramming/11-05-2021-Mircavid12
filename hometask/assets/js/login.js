@@ -37,6 +37,9 @@ loginBtn.addEventListener('click',function(e){
       let cookiedata =  `token=supersecuretoken;expires=${now.toUTCString()};`;
       document.cookie=cookiedata
 
+      if(!JSON.parse(localStorage.getItem('lang'))){
+        JSON.parse(localStorage.setItem('lang',"EN"))
+      }
       
     getUserDetail();
       customerTable.style.display = "block";
@@ -91,9 +94,6 @@ function getUserDetail(){
 
 getUserDetail();
 
-if(!JSON.parse(localStorage.getItem('lang'))){
-  JSON.parse(localStorage.setItem('lang',"EN"))
-}
 
 
 
