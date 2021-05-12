@@ -36,10 +36,7 @@ loginBtn.addEventListener('click',function(e){
       now.setTime(now.getTime() + 24 * 36000 * 1000);
       let cookiedata =  `token=supersecuretoken;expires=${now.toUTCString()};`;
       document.cookie=cookiedata
-
-      if(!JSON.parse(localStorage.getItem('lang'))){
-        JSON.parse(localStorage.setItem('lang',"EN"))
-      }
+      localStorage.setItem('lang',"EN");
       
     getUserDetail();
       customerTable.style.display = "block";
