@@ -7,7 +7,7 @@ var year = dateObj.getUTCFullYear();
 var arr1 = [];
 var arr2 = [];
 function getCustomers() {
-  fetch("./assets/js/article.json")
+  fetch("assets/js/article.json")
     .then(function (response) {
       return response.json();
     })
