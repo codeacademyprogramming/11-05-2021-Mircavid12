@@ -1,0 +1,15 @@
+#login{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    .login{
+        height: 100vh;
+        #wrong-email{
+            display: none;
+        }
+        #wrong-password{
+            display: none;
+        }
+    }
+}
